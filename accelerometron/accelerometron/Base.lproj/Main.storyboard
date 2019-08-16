@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a3I-p4-7mc">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="dUU-1w-T0j">
+            <objects>
+                <tableViewController id="a3I-p4-7mc" customClass="TableViewController" customModule="accelerometron" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aLL-V8-bkB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="parallaxCell" rowHeight="120" id="wHM-pn-jYz" customClass="ParallaxCell" customModule="accelerometron" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wHM-pn-jYz" id="uMX-iN-uD9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="TQk-FH-uRz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cameras" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F8-LY-kia">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-HeavyItalic" family="Avenir Next" pointSize="50"/>
+                                            <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TQk-FH-uRz" firstAttribute="leading" secondItem="uMX-iN-uD9" secondAttribute="leading" id="2DQ-WL-Seg"/>
+                                        <constraint firstItem="TQk-FH-uRz" firstAttribute="top" secondItem="uMX-iN-uD9" secondAttribute="top" id="6OI-me-UfN"/>
+                                        <constraint firstItem="6F8-LY-kia" firstAttribute="leading" secondItem="uMX-iN-uD9" secondAttribute="leading" id="75y-d0-M3A"/>
+                                        <constraint firstAttribute="bottom" secondItem="TQk-FH-uRz" secondAttribute="bottom" id="AT4-7l-Wfp"/>
+                                        <constraint firstAttribute="bottom" secondItem="6F8-LY-kia" secondAttribute="bottom" id="PLw-MA-Blf"/>
+                                        <constraint firstItem="6F8-LY-kia" firstAttribute="top" secondItem="uMX-iN-uD9" secondAttribute="top" id="Toi-48-GLD"/>
+                                        <constraint firstAttribute="trailing" secondItem="6F8-LY-kia" secondAttribute="trailing" id="bwP-9I-J7k"/>
+                                        <constraint firstAttribute="trailing" secondItem="TQk-FH-uRz" secondAttribute="trailing" id="dxr-nj-7QS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="6F8-LY-kia" id="THK-78-7L7"/>
+                                    <outlet property="itemImageView" destination="TQk-FH-uRz" id="nAZ-fn-3IA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a3I-p4-7mc" id="4JV-kV-CL2"/>
+                            <outlet property="delegate" destination="a3I-p4-7mc" id="prt-i4-tR8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAE-2n-Oiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265.21739130434787" y="-7.3660714285714279"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="1080" height="720"/>
+    </resources>
+</document>
